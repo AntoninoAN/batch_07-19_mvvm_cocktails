@@ -1,0 +1,25 @@
+pipeline{
+    agent any
+    
+    tools {
+      gradle ‘gradle build runner'
+    }
+
+    stages {
+        stage(“build”) {
+          steps {
+                echo ‘building the application’
+            }
+        }
+        stage(“test”) {
+          steps {
+                Echo ’test the application'
+          }
+        }
+        stage(“deploy”) {
+            steps {
+                echo ‘deploy the application'
+            }
+        }
+    }
+}
