@@ -2,7 +2,7 @@ pipeline{
     agent any
     
     tools {
-      gradle ‘gradle build runner'
+      
     }
 
     stages {
@@ -13,7 +13,7 @@ pipeline{
         }
         stage(“test”) {
           steps {
-                Echo ’test the application'
+                echo ’test the application'
           }
         }
         stage(“deploy”) {
