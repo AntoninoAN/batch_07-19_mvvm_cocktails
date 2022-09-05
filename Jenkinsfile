@@ -1,21 +1,21 @@
 pipeline{
     agent any
     tools{
-        gradle 'gradle'
+        gradle 'gradle-7.3.3'
     }
     stages {
-        stage(“build”) {
+        stage('build') {
           steps {
                 echo 'building the application'
-                sh './gradlew -v'
+                bat 'gradle build'
             }
         }
-        stage(“test”) {
+        stage('test') {
           steps {
                 echo 'test the application'
           }
         }
-        stage(“deploy”) {
+        stage('deploy') {
             steps {
                 echo 'deploy the application'
             }
