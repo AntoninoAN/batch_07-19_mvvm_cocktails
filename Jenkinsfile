@@ -7,7 +7,7 @@ pipeline{
         stage(“build”) {
           steps {
                 echo 'building the application'
-                sh 'gradle build runner'
+                sh './gradlew -v'
             }
         }
         stage(“test”) {
