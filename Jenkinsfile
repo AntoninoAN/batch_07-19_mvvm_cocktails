@@ -1,9 +1,13 @@
 pipeline{
     agent any
+    tools{
+        gradle 'gradle'
+    }
     stages {
         stage(“build”) {
           steps {
                 echo 'building the application'
+                sh 'gradle build runner'
             }
         }
         stage(“test”) {
